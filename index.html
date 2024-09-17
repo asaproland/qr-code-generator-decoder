@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二维码生成器和解码器</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>二维码生成器和解码器</h1>
+    
+    <div class="section">
+        <h2>生成二维码</h2>
+        <p>输入一个URL并点击按钮生成二维码：</p>
+        <input type="text" id="urlInput" placeholder="在此输入URL">
+        <button onclick="generateQRCode()">生成二维码</button>
+        <canvas id="qrcodeCanvas"></canvas>
+    </div>
+
+    <div class="section">
+        <h2>解码二维码</h2>
+        <p>上传一个二维码图片进行解码：</p>
+        <input type="file" id="fileInput" accept="image/*" onchange="decodeQRCode(event)">
+        <p id="decodedUrl"></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
